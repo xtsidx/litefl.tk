@@ -1,0 +1,95 @@
+body {
+  background-image: url(/img/bg.png);
+}
+
+nav.navbar {
+  margin: 0 auto;
+  border-top: 4px solid #337ab7;
+}
+
+table.faucets-list {
+  background-color: white;
+  box-shadow: 0 0 2px rgba(150, 150, 150, 0.4);
+}
+
+  table.faucets-list .ad {
+    width: 728px;
+    height: 90px;
+    background-color: #aaa;
+    margin: 0 auto;
+  }
+
+.copyleft {
+  -webkit-transform: scaleX(-1);
+     -moz-transform: scaleX(-1);
+       -o-transform: scaleX(-1);
+   -khtml-transform: scaleX(-1);
+      -ms-transform: scaleX(-1);
+          transform: scaleX(-1);
+  display: inline-block;
+}
+
+
+/************************************************
+ * AD - рекламные блоки
+ ************************************************
+ */
+
+.ad-box {
+  background-color: #aaa;
+  margin: 0 auto;
+}
+
+  .ad-box.ad-horizontal-left,
+  .ad-box.ad-horizontal-right {
+    width: 160px;
+    height: 600px;
+    margin: 0 auto;
+    position: fixed;
+    top: 20%;
+
+  }
+
+  .ad-box.ad-horizontal-left {left: 1em;}
+  .ad-box.ad-horizontal-right {right: 1em;}
+
+  @media only screen and (max-width: 1500px) {
+    .ad-box.ad-horizontal-left,
+    .ad-box.ad-horizontal-right{
+      display:none;}
+  }
+
+
+  .ad-box.ad-header {
+    width: 468px;
+    height: 60px;}
+
+  .ad-box.ad-tablerow-one {
+    width: 728px;
+    height: 15px;}
+
+  .ad-box.ad-tablerow-two {
+    width: 468px;
+    height: 15px;}
+
+  .ad-box.ad-footer-left,
+  .ad-box.ad-footer-right {
+    width: 468px;
+    height: 15px;}
+
+  .ad-box.ad-footer-big {
+    width: 728px;
+    height: 90px;}
+
+/************************************************
+ * BOOTSTRAP REWRITE
+ ************************************************
+ */
+
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
+  border-top: 2px solid #337ab7;
+}
+
+.tab-content {
+  background-color: white;
+}
