@@ -7,6 +7,7 @@
     <title>LiteFL - faucets list with updates every hour (BTC, LTC, DOGE, DASH, PPC, XPM)</title>
     <meta name="description" content="Faucets list updates every hour">
     <meta name="Keywords" content="Bitcoin, BTC, faucets, Dogecoin, DOGE, DASH, LTC, XPM, PPC, reward, free satoshi">
+    <link rel="icon" type="image/png" href="/img/favicon.png" />
 
     <!-- Bootstrap -->
     <link href="/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -53,6 +54,10 @@ allowtransparency='true' frameborder='0'></iframe>
         <li role="presentation"><a href="#tab-xpm" role="tab" data-toggle="tab">
           XPM <span class="label label-primary">5</span></a></li>
 
+        <li role="presentation" class="pull-right"><a href="#tab-help" role="tab" data-toggle="tab">
+          <i class="glyphicon glyphicon-info-sign"></i></a></li>
+        <li role="presentation" class="pull-right"><a href="#tab-config" role="tab" data-toggle="tab">
+          <i class="glyphicon glyphicon-wrench"></i></a></li>
         <li role="presentation" class="pull-right"><a href="#tab-update" role="tab" data-toggle="tab">
           Updates <span class="label label-su]ccess">!</span></a></li>
 
@@ -62,7 +67,7 @@ allowtransparency='true' frameborder='0'></iframe>
       <div class="tab-content">
 
         <!-- Faucets List Tabs -->
-        <div role="tabpanel" class="tab-pane" id="tab-btc">
+        <div role="tabpanel" class="tab-pane active" id="tab-btc">
 
             <tr><td colspan="5"><br>
               <h4 class="text-warning text-center">
@@ -74,7 +79,7 @@ allowtransparency='true' frameborder='0'></iframe>
             <br></td></tr>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="tab-doge">
+        <div role="tabpanel" class="tab-pane " id="tab-doge">
 
             <tr><td colspan="5"><br>
               <h4 class="text-warning text-center">
@@ -86,7 +91,7 @@ allowtransparency='true' frameborder='0'></iframe>
             <br></td></tr>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="tab-ltc">
+        <div role="tabpanel" class="tab-pane " id="tab-ltc">
 
             <tr><td colspan="5"><br>
               <h4 class="text-warning text-center">
@@ -98,7 +103,7 @@ allowtransparency='true' frameborder='0'></iframe>
             <br></td></tr>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="tab-dash">
+        <div role="tabpanel" class="tab-pane " id="tab-dash">
 
             <tr><td colspan="5"><br>
               <h4 class="text-warning text-center">
@@ -110,7 +115,7 @@ allowtransparency='true' frameborder='0'></iframe>
             <br></td></tr>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="tab-ppc">
+        <div role="tabpanel" class="tab-pane " id="tab-ppc">
 
             <tr><td colspan="5"><br>
               <h4 class="text-warning text-center">
@@ -122,7 +127,7 @@ allowtransparency='true' frameborder='0'></iframe>
             <br></td></tr>
 
         </div>
-        <div role="tabpanel" class="tab-pane" id="tab-xpm">
+        <div role="tabpanel" class="tab-pane " id="tab-xpm">
 
             <table class="table table-hover faucets-list">
               <thead>
@@ -134,39 +139,39 @@ allowtransparency='true' frameborder='0'></iframe>
               </thead>
               <tbody>
 
-                <tr data-faucet-time="30" data-faucet-urlid="http://pool-prime.net/faucet/">
-                  <td>Faucet-prime</td><td>3627933882</td>
-                  <td>30 min.</td><td>20000</td>
-                  <td><a  href="http://pool-prime.net/faucet/?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
-                          class="btn btn-success btn-block btn-sm">
-                            Visit</a></td>
-                </tr>
-                <tr data-faucet-time="30" data-faucet-urlid="http://prime.funfaucet.one">
-                  <td>Fun Faucet Prime</td><td>353413945</td>
-                  <td>30 min.</td><td>150000</td>
-                  <td><a  href="http://prime.funfaucet.one?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
-                          class="btn btn-success btn-block btn-sm">
-                            Visit</a></td>
-                </tr>
-                <tr data-faucet-time="300" data-faucet-urlid="http://www.paidonlinesites.com/primecoin/">
+                <tr class="faucet" data-faucet-time="300" data-faucet-urlid="http://www.paidonlinesites.com/primecoin/">
                   <td>Get Paid Online - Easy Way to Get Primecoin</td><td>259700200</td>
                   <td>300 min.</td><td>500000</td>
                   <td><a  href="http://www.paidonlinesites.com/primecoin/?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
-                          class="btn btn-success btn-block btn-sm">
+                          class="btn btn-success btn-block btn-sm visit-btn">
                             Visit</a></td>
                 </tr>
-                <tr data-faucet-time="60" data-faucet-urlid="http://www.coins2day.com/primecoin-faucet/">
+                <tr class="faucet" data-faucet-time="30" data-faucet-urlid="http://prime.funfaucet.one">
+                  <td>Fun Faucet Prime</td><td>353413945</td>
+                  <td>30 min.</td><td>150000</td>
+                  <td><a  href="http://prime.funfaucet.one?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
+                          class="btn btn-success btn-block btn-sm visit-btn">
+                            Visit</a></td>
+                </tr>
+                <tr class="faucet" data-faucet-time="60" data-faucet-urlid="http://www.coins2day.com/primecoin-faucet/">
                   <td>Primecoin Faucet</td><td>612586700</td>
                   <td>60 min.</td><td>50000</td>
                   <td><a  href="http://www.coins2day.com/primecoin-faucet/?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
-                          class="btn btn-success btn-block btn-sm">
+                          class="btn btn-success btn-block btn-sm visit-btn">
                             Visit</a></td>
                 </tr>
-                <tr data-faucet-time="180" data-faucet-urlid="http://mu-social.esy.es">
+                <tr class="faucet" data-faucet-time="30" data-faucet-urlid="http://pool-prime.net/faucet/">
+                  <td>Faucet-prime</td><td>3627933882</td>
+                  <td>30 min.</td><td>20000</td>
+                  <td><a  href="http://pool-prime.net/faucet/?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
+                          class="btn btn-success btn-block btn-sm visit-btn">
+                            Visit</a></td>
+                </tr>
+                <tr class="faucet" data-faucet-time="180" data-faucet-urlid="http://mu-social.esy.es">
                   <td>Seopolza a Box</td><td>103602250</td>
                   <td>180 min.</td><td>10000</td>
                   <td><a  href="http://mu-social.esy.es?r=AMXcYuE4rBNeoBXM2vs8HZQoWxd7Th4jk6" target="_blank"
-                          class="btn btn-success btn-block btn-sm">
+                          class="btn btn-success btn-block btn-sm visit-btn">
                             Visit</a></td>
                 </tr>
 
@@ -190,6 +195,8 @@ allowtransparency='true' frameborder='0'></iframe>
 
         <div role="tabpanel" class="tab-pane" id="tab-update">UPDATES HERE</div>
       </div>
+
+      <br>
 
       <p class="text-center">
         LiteFL - Faucets list is updated every hour. The slogan of the project -
@@ -230,5 +237,6 @@ allowtransparency='true' frameborder='0'></iframe>
 
     <script src="/libs/jquery.min.js"></script>
     <script src="/libs/bootstrap/js/bootstrap.min.js"></script>
+    <script src="/js/script.js"></script>
   </body>
 </html>

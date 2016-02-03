@@ -19,6 +19,12 @@ table.faucets-list {
     margin: 0 auto;
   }
 
+  .faucets-list .faucet.visited .visit-btn {
+    background-color: #ffce85;
+    color:  #79715D;
+    border: transparent;
+  }
+
 .copyleft {
   -webkit-transform: scaleX(-1);
      -moz-transform: scaleX(-1);
