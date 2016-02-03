@@ -60,7 +60,8 @@ table.faucets-list {
   }
 
 
-  .ad-box.ad-header {
+  .ad-box.ad-top-left,
+  .ad-box.ad-top-right{
     width: 468px;
     height: 60px;}
 
