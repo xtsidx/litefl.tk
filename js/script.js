@@ -14,7 +14,6 @@ $(function (){
 
   function changeVisiState(faucet, value){
     var visit_btn = $('.visit-btn', faucet);
-    console.log(visit_btn);
     if(value) {
       faucet.addClass('visited');
       visit_btn.text("Wait");
@@ -24,41 +23,16 @@ $(function (){
     }
   }
 
-
-  function getFaucetEl(urlid) {
-      return $(".faucet[data-faucet-id='"+urlid+"']");
-  }
-
-  function loadFaucets(faucets) {
-      faucets = faucets ? faucets : {};
-
-      $(".faucet input.time").val("");
-      $(".faucet").removeClass("hidden like dislike star");
-
-      $.each(faucets, function(url, faucet){
-          var f = getFaucetEl(url);
-          $('input.time', f).val(faucet['time']);
-          if(faucet['visit'] && faucet['time'] && (nowTime() - faucet['visit'] < faucet['time'])) {
-              $('a.visit', f).addClass('warning hollow');
-          }
-          if(faucet['star']) f.addClass('star');
-          if(faucet['like']) f.addClass('like');
-          if(faucet['dislike']) f.addClass('dislike');
-          if(faucet['hide']) f.addClass('hidden');
-      });
-
-      return faucets;
-  }
-
   function saveVisited() {
       localStorage.setItem('visited', JSON.stringify(visited));
-      console.log("Save visited");
+      console.log("Visited saved");
   }
 
   // количество минут прошедших с 1 января 1970 года
   function nowTime() {
-      return new Date().getTime()/60000;
+      return Math.floor(new Date().getTime()/60000);
   }
+
 
   /** Клик на кнопке "Visit" */
   $('.faucets-list .faucet .visit-btn').click(function (e) {
@@ -125,18 +99,7 @@ $(function (){
     first_interval = false;
     saveVisited();
   }
-
   // ========================================================================
-
-  // Load Faucets Data
-  // {url:{time:230, visit:"567834754"}}
-  var faucets = {}
-  var startupData = JSON.parse(localStorage.getItem('faucets'));
-  if (startupData) {
-      faucets = loadFaucets(startupData);
-  }
-  var faucets = loadFaucets(startupData);
-
 
   loadAddressBook();
 
@@ -146,6 +109,6 @@ $(function (){
 
   onInterval();
 
-  setInterval(onInterval, 30000);
+  setInterval(onInterval, 15000);
 
 });
