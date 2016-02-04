@@ -46,7 +46,7 @@ $(function (){
       visited[urlid] = nowTime() + 2;
       changeVisiState(fel, true);
     }
-    window.open(url, '_blank');
+    //window.open(url, '_blank');
     console.log("Visit: " + urlid);
   });
 
