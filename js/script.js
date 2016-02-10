@@ -53,6 +53,27 @@ $(function (){
   // ======
 
 
+  // === i18n
+
+  function i18n(locale) {
+    if(locale == 'ru'  ||  locale == 'en') {
+      $("html").attr('lang', locale);
+      if(locale == 'ru') {
+        $("html > head > title").text("LiteFL - список кранов обновляемый каждый час (BTC, LTC, DOGE, DASH, PPC, XPM)");
+      }
+    }
+  }
+
+  function i18n_detect(){
+    var l = navigator.language;
+    if(l == 'ru' || l == 'ru-RU') {
+      i18n('ru');
+    }
+  }
+
+  // END LOCALES ======
+
+
   // === ADDRESS BOOK
 
   function loadAddressBook() {
@@ -90,7 +111,8 @@ $(function (){
     $.each(visited, function(urlid, last_visit){
       var faucet = $(".faucet[data-faucet-urlid='"+urlid+"']");
       var time = faucet.attr('data-faucet-time');
-      if(nowTime() > (last_visit + time)) {
+      var ftime = last_visit + parseInt(time);
+      if(nowTime() > ftime) {
         changeVisiState(faucet, false);
       } else if(first_interval) {
         changeVisiState(faucet, true);
@@ -110,5 +132,7 @@ $(function (){
   onInterval();
 
   setInterval(onInterval, 15000);
+
+  i18n_detect();
 
 });

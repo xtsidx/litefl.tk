@@ -35,6 +35,28 @@ table.faucets-list {
   display: inline-block;
 }
 
+#tab-help {
+    padding: 20px;
+}
+
+
+/************************************************
+ * LOCALE - i18n
+ ************************************************
+ */
+
+html[lang=ru] .i18n-en {
+  display: none;
+}
+
+.i18n-ru {
+  display: none;
+}
+
+html[lang=ru] .i18n-ru {display: initial;}
+
+
+
 
 /************************************************
  * AD - рекламные блоки
@@ -52,7 +74,7 @@ table.faucets-list {
     height: 600px;
     margin: 0 auto;
     position: fixed;
-    top: 20%;
+    top: 10%;
 
   }
 
