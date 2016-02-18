@@ -80,25 +80,24 @@ $(function (){
       var book = JSON.parse(localStorage.getItem('addressbook'));
       if (!book) return;
       $('#addressbook .input-group').each(function (i, a){
-          var coin = $('.input-group-label', a).text();
-          $('.input-group-field', a).val(book[coin]);
+          var coin = $('.coin', a).text();
+          $('input', a).val(book[coin]);
       });
-      noty({text: "Address book loaded from Local Storage!", type: 'success'});
   }
 
   function saveAddressBook() {
       var book = {};
       $('#addressbook .input-group').each(function (i, a){
-          var coin = $('.input-group-label', a).text();
-          var addr = $('.input-group-field', a).val();
+          var coin = $('.coin', a).text();
+          var addr = $('input', a).val();
           book[coin] = addr;
+          console.log(coin);
       });
       localStorage.setItem('addressbook', JSON.stringify(book));
-      noty({text: "Address book has been saved to Local Storage!", type: 'success'});
   }
 
   function onCheckInAddressBook(e) {
-       var addr = $(e.target).parents('.input-group').children('.input-group-field').val();
+       var addr = $(e.target).parents('.input-group').children('input').val();
        window.open('https://faucetbox.com/check/' + addr, '_blank');
   }
 
@@ -125,9 +124,9 @@ $(function (){
 
   loadAddressBook();
 
-  $("#addressbook .showbookbtn").click(function () {$("#addressbook").toggleClass("hidden");});
-  $("#addressbook .button.check").click(onCheckInAddressBook);
-  $("#addressbook .button.save").click(saveAddressBook);
+  $("#addressbook .showbookbtn").click(function () {$("#addressbook").toggleClass("hidepane");});
+  $("#addressbook .btn.check").click(onCheckInAddressBook);
+  $("#addressbook .btn.save").click(saveAddressBook);
 
   onInterval();
 

@@ -110,6 +110,47 @@ html[lang=ru] .i18n-ru {display: initial;}
     width: 728px;
     height: 90px;}
 
+
+/* ADDRESSBOOK */
+#addressbook {
+    bottom: 0;
+    left: 0;
+    width: 36em;
+    position: fixed;
+}
+
+#addressbook .input-group {
+    margin: 1em 0;
+}
+
+@media screen and (max-width: 39.9375em) {
+    #addressbook {
+        width: 100%;
+    }
+}
+
+#addressbook .panel {
+    display: block;
+    background-color: #eee;
+    border: 1px solid #ddd;
+    padding: 1em;
+    box-shadow: 1px -1px 4px rgba(0, 0, 0, 0.39);
+}
+
+#addressbook.hidepane .panel {
+    display: none;
+}
+
+#addressbook .showbookbtn {
+    margin: 0;
+}
+
+#addressbook.hidepane .showbookbtn {
+    display: inline;
+}
+
+/* === */
+
 /************************************************
  * BOOTSTRAP REWRITE
  ************************************************
