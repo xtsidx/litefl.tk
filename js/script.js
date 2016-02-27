@@ -42,13 +42,8 @@ $(function (){
     var url = btn.attr('href');
     var time = fel.attr('data-faucet-time');
     var last_visit = visited[urlid];
-    console.log(last_visit);
-    console.log(nowTime());
-    if (!last_visit  ||  nowTime() > (last_visit + time)) {
-      visited[urlid] = nowTime() + 2;
-      changeVisiState(fel, true);
-    }
-    //window.open(url, '_blank');
+    changeVisiState(fel, true);
+    visited[urlid] = nowTime() + 2;
     console.log("Visit: " + urlid);
   });
 
