@@ -184,7 +184,7 @@
     var refPos = {};
     for(var i in faucets) {
       var f = faucets[i];
-      var cur = [f.cur];
+      var cur = [f.currency];
       var ref = referrals[cur];
 
       if(Array.isArray(ref)  &&  ref.length > 0) {
