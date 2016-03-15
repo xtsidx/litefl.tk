@@ -86,12 +86,13 @@
         case "unknown_balance": if(!f.balance) return true; break;
         // ---
         case "reward_more_balance":
-          if(f.balance && f.reward)
-          return f.reward > f.balance; break;
+          var b = parseInt(f.balance), r = parseInt(f.reward)
+          if(b != NaN && r != NaN)
+            return b < r; break;
         case "balance_more_reward":
           var b = parseInt(f.balance), r = parseInt(f.reward)
           if(b != NaN && r != NaN)
-          return b > r; break;
+            return b > r; break;
       }
       // фильтрация по тегам
       if(fv.lastIndexOf("Tag:", 0) === 0) {
