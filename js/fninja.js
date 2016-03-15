@@ -89,8 +89,9 @@
           if(f.balance && f.reward)
           return f.reward > f.balance; break;
         case "balance_more_reward":
-          if((f.balance || f.balance === 0) && (f.reward || f.reward === 0))
-          return f.reward < f.balance; break;
+          var b = parseInt(f.balance), r = parseInt(f.reward)
+          if(b != NaN && r != NaN)
+          return b > r; break;
       }
       // фильтрация по тегам
       if(fv.lastIndexOf("Tag:", 0) === 0) {
