@@ -86,9 +86,11 @@
         case "unknown_balance": if(!f.balance) return true; break;
         // ---
         case "reward_more_balance":
-          if(f.balance && f.reward) return f.reward > f.balance; break;
+          if(f.balance && f.reward)
+          return f.reward > f.balance; break;
         case "balance_more_reward":
-          if(f.balance && f.reward) return f.reward < f.balance; break;
+          if((f.balance || f.balance === 0) && (f.reward || f.reward === 0))
+          return f.reward < f.balance; break;
       }
       // фильтрация по тегам
       if(fv.lastIndexOf("Tag:", 0) === 0) {
