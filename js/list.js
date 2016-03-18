@@ -105,40 +105,6 @@ $(function () {
 
 
   /**-----------------------------------------------------
-   * Загружает все нужные данные из JSON файлов
-   *------------------------------------------------------
-   *
-   * callback(result, errors) - вызывается при завершении загрузки
-  **/
-  function loadJSONs(callback) {
-    var result = {};
-    var errors = {};
-
-    var count = 0;
-    var _count = function (){
-      count += 1;
-      if(_JSONs.length == count) {
-        callback(result, errors);
-      }
-    }
-
-    $.each(_JSONs, function (key, value){
-      $.ajax({
-        dataType: "json",
-        url: "/json/"+value+".json",
-        success: function (json){
-          result[value] = json;
-          _count();
-        },
-        error: function (e) {
-          errors[value] = e;
-          _count();
-        }
-      });
-    });
-  }
-
-  /**-----------------------------------------------------
    * Полная инициализация после загрузки JSON
    *------------------------------------------------------
   **/
@@ -348,19 +314,13 @@ $(function () {
 
   content_el.html(loader_tmpl());
 
-  loadJSONs(function(result, errors){
-    if($.isEmptyObject(errors)) {
-      withdraws = result['withdraws'];
-      currency = result['currency'];
-      faucets = result['faucets'];
-      tags = result['tags'];
-      referrals = result['referrals'];
-      initApp();
-    } else {
-      content_el.html(loader_error_tmpl({"message":"Loading JSONs with errors"}));
-      console.error(errors);
-    }
-  });
+  withdraws = litefldata['withdraws'];
+  currency = litefldata['currency'];
+  faucets = litefldata['faucets'];
+  tags = litefldata['tags'];
+  referrals = litefldata['referrals'];
+
+  initApp();
 
 
   /**********************************
