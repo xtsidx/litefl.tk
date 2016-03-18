@@ -95,13 +95,14 @@
             return b > r; break;
       }
       // фильтрация по тегам
-      if(fv.lastIndexOf("Tag:", 0) === 0) {
+      if(fv.lastIndexOf("Tag:", 0) == 0) {
+
         if(f.tags &&  Object.keys(f.tags).some(function (e) {
           return ("Tag:" + e) == fv;
         })) return true;
       }
       // фильтрация по методам вывода
-      if(fv.lastIndexOf("Withdraw:", 0) === 0) {
+      if(fv.lastIndexOf("Withdraw:", 0) == 0) {
         if(f.withdraws && f.withdraws.some(function (e) {
           return ("Withdraw:" + e) == fv;
         })) return true;
