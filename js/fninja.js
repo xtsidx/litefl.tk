@@ -93,6 +93,14 @@
           var b = parseInt(f.balance), r = parseInt(f.reward)
           if(b != NaN && r != NaN)
             return b > r; break;
+        case "visit_ready":
+          var b = parseInt(f.balance), r = parseInt(f.reward)
+          if(b != NaN && r != NaN)
+            return b < r; break;
+        case "visit_wait":
+          var b = parseInt(f.balance), r = parseInt(f.reward)
+          if(b != NaN && r != NaN)
+            return b > r; break;
       }
       // фильтрация по тегам
       if(fv.lastIndexOf("Tag:", 0) == 0) {

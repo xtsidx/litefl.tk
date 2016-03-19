@@ -4,9 +4,9 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Referrals - earn from the involved users | LiteFL</title>
-    <meta name="description" content="">
-    <meta name="Keywords" content="Bitcoin, BTC, faucets, Dogecoin, DOGE, DASH, LTC, XPM, PPC, reward, free satoshi">
+    <title>Referrals | LiteFL</title>
+    <meta name="description" content="The referral program allows you to earn cryptocurrency attracting users to your website LiteFL.">
+    <meta name="keywords" content="refferal, faucets list, cryptocurrency, BTC, DOGE, DASH, LTC, PPC, XPM, BLK">
     <link rel="icon" type="image/png" href="/img/favicon.png" />
     <link href="/libs/bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="/libs/bootstrap-select/css/bootstrap-select.min.css" rel="stylesheet">
@@ -27,62 +27,64 @@
       <br>
       <br>
       <ul class="nav nav-pills pull-right">
-        <li role="presentation" ><a href="/">Faucets List</a></li>
+        <li role="presentation" ><a href="/">Home</a></li>
+        <li role="presentation" ><a href="/list">Faucets List</a></li>
         <li role="presentation" class='active'><a href="/referrals">Referrals</a></li>
         <li role="presentation" ><a href="/faq">FAQ</a></li>
       </ul>
     </div>
   </div>
 
-  <p>Get Free BTC, LTC, DOGE, DASH and other cryptocurrency using our fausets list</p>
+</div>
+
   <br>
 
   <link href="/css/referrals.css" rel="stylesheet">
 
-<div class="row">
-  <div class="col-md-7">
-    <div class="jumbotron" style="background-color:transparent;">
-      <h2>Referral program</h2>
-      <br>
-      <p>LiteFL Referral program allows you to receive 50% referral rewards with faucets.</p>
-      <p>Generate the link to your address, and place it on your website or on the forums.</p>
-      <p>When switching users on the referral link in the user's browser will be prescribed localStorage
-        your referral addresses. After half the references to the taps will have your referral address.</p>
-      <p>The more active you will attract users to your website, the higher will be your passive earnings.</p>
-      <p>Enter your wallets address and then click "Make Link".</p>
-    </div>
-  </div>
-  <div class="col-md-5">
-    <div class="panel panel-default">
-      <div class="panel panel-body">
-        <label>BTC</label>
-        <input type="text" name="BTC" class="form-control address" placeholder="Bitcoin address">
+<div class="container">
+  <div class="row">
+    <div class="col-md-7">
+      <div class="jumbotron" style="background-color:transparent;">
+        <h2>Referral program</h2>
         <br>
-        <label>LTC</label>
-        <input type="text" name="LTC" class="form-control address" placeholder="Litecoin address">
-        <br>
-        <label>DOGE</label>
-        <input type="text" name="DOGE" class="form-control address" placeholder="Dogecoin address">
-        <br>
-        <label>DASH</label>
-        <input type="text" name="DASH" class="form-control address" placeholder="DASH address">
-        <br>
-        <label>PPC</label>
-        <input type="text" name="PPC" class="form-control address" placeholder="Peercoin address">
-        <br>
-        <label>XPM</label>
-        <input type="text" name="XPM" class="form-control address" placeholder="Primecoin address">
-      </div>
-      <div class="panel-footer text-center">
-        <a class="btn btn-primary make" href="#">Make link</a>
+        <p>LiteFL Referral program allows you to receive 50% referral rewards with faucets.</p>
+        <p>Generate the link to your address, and place it on your website or on the forums.</p>
+        <p>When switching users on the referral link in the user's browser will be prescribed localStorage
+          your referral addresses. After half the references to the taps will have your referral address.</p>
+        <p>The more active you will attract users to your website, the higher will be your passive earnings.</p>
+        <p>Enter your wallets address and then click "Make Link".</p>
       </div>
     </div>
+    <div class="col-md-5">
+      <div class="panel panel-default">
+        <div class="panel panel-body">
+          <label>BTC</label>
+          <input type="text" name="BTC" class="form-control address" placeholder="Bitcoin address">
+          <br>
+          <label>LTC</label>
+          <input type="text" name="LTC" class="form-control address" placeholder="Litecoin address">
+          <br>
+          <label>DOGE</label>
+          <input type="text" name="DOGE" class="form-control address" placeholder="Dogecoin address">
+          <br>
+          <label>DASH</label>
+          <input type="text" name="DASH" class="form-control address" placeholder="DASH address">
+          <br>
+          <label>PPC</label>
+          <input type="text" name="PPC" class="form-control address" placeholder="Peercoin address">
+          <br>
+          <label>XPM</label>
+          <input type="text" name="XPM" class="form-control address" placeholder="Primecoin address">
+        </div>
+        <div class="panel-footer text-center">
+          <a class="btn btn-primary make" href="#">Make link</a>
+        </div>
+      </div>
+    </div>
   </div>
-</div>
 
-<div id="result">
-
-</div>
+  <div id="result"></div>
+</div> <!-- container -->
 
 
 <script id="result-template" type="text/x-handlebars-template">
@@ -127,8 +129,6 @@
     </div>
     <br>
   </footer>
-
-</div>
 
 
     <script>

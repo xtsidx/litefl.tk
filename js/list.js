@@ -171,6 +171,11 @@ $(function () {
     lurk_el.append(options);
     show_el.append(options);
 
+    // достаём из URL параметры фильтра
+    var qParams = $.deparam(window.location.search.substring(1));
+    console.log(qParams);
+    if(qParams.currency) $("select.currency", toolpanel_el).val(qParams.currency);
+
     toolpanel_el.show();
   }
 

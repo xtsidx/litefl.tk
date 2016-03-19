@@ -1,0 +1,11 @@
+header.jumbotron {
+  background-image: url(/img/fp_header.jpg);
+  background-size: cover;
+  color: white;
+  margin-bottom: 0;
+}
+
+.currencylist {
+  background-color: white;
+  padding: 40px 0;
+}

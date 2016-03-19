@@ -15,7 +15,7 @@
       var addr = input.val();
       if(addr) addresses[name] = addr;
     });
-    var url = "http://litefl.tk?r=";
+    var url = "http://litefl.tk/list?r=";
     var first = true;
     for(var cur in addresses){
       if(!first) url += "_";
