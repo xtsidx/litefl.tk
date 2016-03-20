@@ -327,6 +327,11 @@ $(function () {
 
   initApp();
 
+  // для возможности фильтрации по визитам
+  window.fninja.lastVisit = function (id) {
+    return visits[id];
+  };
+
 
   /**********************************
    *

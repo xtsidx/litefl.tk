@@ -10,6 +10,12 @@
   fninja.localStorageItemName = 'fninja_referrals';
 
   /*----------------------------------------------------------
+   * Возвращает время последнего визита на кран
+   * необходимо переназначить функцию, чтобы фильтровать по визитам
+   */
+  window.fninja.lastVisit = function (id) {return null;}
+
+  /*----------------------------------------------------------
    * Возвращает массив кранов отсортированный, отфильтрованный
    * и с применением пагинации указанными в params
    */
@@ -93,6 +99,18 @@
           var b = parseInt(f.balance), r = parseInt(f.reward)
           if(b != NaN && r != NaN)
             if(b > r) return true; break;
+        // ---
+        case "visit_ready":
+        case "visit_wait":
+          var oldVisit = fninja.lastVisit(f.id);
+          if(oldVisit  && f.time) {
+            var t = Math.floor(new Date().getTime()/60000) + 2;
+            var value = (t < oldVisit + f.time + 2) ? true : false;
+            return (fv == "visit_wait") ? value : !value;
+          } else {
+            return (fv == "visit_ready") ? true : false;
+          }
+          break;
 
         default:
           // фильтрация по тегам
