@@ -106,9 +106,9 @@
           if(oldVisit  && f.time) {
             var t = Math.floor(new Date().getTime()/60000) + 2;
             var value = (t < oldVisit + f.time + 2) ? true : false;
-            return (fv == "visit_wait") ? value : !value;
+            if (fv == "visit_wait"  &&  value) return true;
           } else {
-            return (fv == "visit_ready") ? true : false;
+            if (fv == "visit_ready") return true;
           }
           break;
 
