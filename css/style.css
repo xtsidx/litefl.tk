@@ -68,9 +68,9 @@ html[lang=ru] .i18n-ru {display: initial;}
   margin: 0 auto;
 }
 
-  .ad-box.ad-horizontal-left,
-  .ad-box.ad-horizontal-right {
-    width: 160px;
+  .ad-box.ad-vertical-left,
+  .ad-box.ad-vertical-right {
+    width: 120px;
     height: 600px;
     margin: 0 auto;
     position: fixed;
@@ -78,12 +78,12 @@ html[lang=ru] .i18n-ru {display: initial;}
 
   }
 
-  .ad-box.ad-horizontal-left {left: 1em;}
-  .ad-box.ad-horizontal-right {right: 1em;}
+  .ad-box.ad-vertical-left {left: 3%;}
+  .ad-box.ad-vertical-right {right: 3%;}
 
   @media only screen and (max-width: 1500px) {
-    .ad-box.ad-horizontal-left,
-    .ad-box.ad-horizontal-right{
+    .ad-box.ad-vertical-left,
+    .ad-box.ad-vertical-right{
       display:none;}
   }
 
