@@ -4,6 +4,11 @@ body {
   background-attachment: fixed;
 }
 
+.nav .nav-pills a {
+    color: white;
+}
+
+
 .faucetshead {
   border-bottom: 2px solid #dadada;
   padding: 5px;
