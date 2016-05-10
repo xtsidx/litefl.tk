@@ -1,6 +1,7 @@
 body {
   background: url(/img/litefl_bg.jpg) center center no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 nav.navbar {
@@ -40,6 +41,9 @@ table.faucets-list {
     padding: 20px;
 }
 
+footer {
+    background: white;
+}
 
 /************************************************
  * LOCALE - i18n
@@ -163,4 +167,8 @@ html[lang=ru] .i18n-ru {display: initial;}
 
 .tab-content {
   background-color: white;
+}
+
+.btn, .btn-lg, .panel {
+    border-radius: 0;
 }
