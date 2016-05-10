@@ -42,7 +42,8 @@ table.faucets-list {
 }
 
 footer {
-    background: white;
+    background: #f2f2f2;
+    padding-top: 10px;
 }
 
 /************************************************
@@ -169,6 +170,6 @@ html[lang=ru] .i18n-ru {display: initial;}
   background-color: white;
 }
 
-.btn, .btn-lg, .panel {
+.btn, .btn-lg, .panel, .panel-heading {
     border-radius: 0;
 }
