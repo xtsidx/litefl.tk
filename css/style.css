@@ -1,6 +1,5 @@
 body {
-  background: url(/img/litefl_bg.jpg) center center no-repeat;
-  background-size: cover;
+  background: url(/img/bg.jpg) repeat;
   background-attachment: fixed;
 }
 
